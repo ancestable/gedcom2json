@@ -1,0 +1,32 @@
+{
+  "name": "@ancestable/gedcom2json",
+  "version": "0.0.1",
+  "description": "Conversation from GEDCOM v7 to JSON",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["/lib/**/*"],
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watchAll",
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "onchange 'src/**/*.ts' -- npm run build",
+    "prepare" : "npm run build"
+  },
+  "keywords": ["GEDCOM", "conversation", "JSON"],
+  "author": "Christian Bühlmeyer",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.9.3",
+    "@types/source-map-support": "^0.5.4",
+    "jest": "^27.2.0",
+    "onchange": "^7.1.0",
+    "serve": "^12.0.1",
+    "source-map-support": "^0.5.20",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@ancestable/gedcom7models": "^1.0.5"
+  }
+}
