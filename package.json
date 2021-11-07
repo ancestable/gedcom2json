@@ -4,15 +4,21 @@
   "description": "Conversation from GEDCOM v7 to JSON",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["/lib/**/*"],
+  "files": [
+    "/lib/**/*"
+  ],
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watchAll",
     "build": "tsc -p tsconfig.json",
     "build:watch": "onchange 'src/**/*.ts' -- npm run build",
-    "prepare" : "npm run build"
+    "prepare": "npm run build"
   },
-  "keywords": ["GEDCOM", "conversation", "JSON"],
+  "keywords": [
+    "GEDCOM",
+    "conversation",
+    "JSON"
+  ],
   "author": "Christian Bühlmeyer",
   "license": "MIT",
   "devDependencies": {

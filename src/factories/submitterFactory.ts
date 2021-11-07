@@ -23,6 +23,7 @@ export class SubmitterFactory extends BaseFactory<SubmitterRecord>{
     const noteEntries = factoryHelper.getChildrenWithTags(new NoteStructureFactory().tags);
     const changeDateEntry = factoryHelper.getEntryWithPath([Tag.Change]);
     const creationDateEntry = factoryHelper.getEntryWithPath([Tag.CreationDate]);
+    const test = new NoteStructureFactory().fromGedcomEntries(noteEntries);
 
     return {
       referenceId: submitterEntry.referenceId,

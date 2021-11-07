@@ -17,9 +17,9 @@ export class MultimediaLinkFactory extends BaseFactory<MultimediaLink> {
         reference: { reference: entry.value || '', target: PointerTarget.OBJE },
         [Tag.Crop]: factoryHelper.isDefined([Tag.Crop]) && {
           [Tag.Top]: factoryHelper.getValue([Tag.Crop, Tag.Top]),
-          [Tag.Left]: factoryHelper.getValue([Tag.Crop, Tag.Top]),
-          [Tag.Height]: factoryHelper.getValue([Tag.Crop, Tag.Top]),
-          [Tag.Width]: factoryHelper.getValue([Tag.Crop, Tag.Top]),
+          [Tag.Left]: factoryHelper.getValue([Tag.Crop, Tag.Left]),
+          [Tag.Height]: factoryHelper.getValue([Tag.Crop, Tag.Height]),
+          [Tag.Width]: factoryHelper.getValue([Tag.Crop, Tag.Width]),
         },
         [Tag.Title]: factoryHelper.getValue([Tag.Title]),
       }

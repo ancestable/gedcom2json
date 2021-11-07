@@ -2,6 +2,7 @@ import { Mime, Note, NoteStructure, PointerTarget, SNote, Tag } from "@ancestabl
 import { FactoryHelper } from "../helper/factoryHelper";
 import { Entry } from "../models/entry";
 import { BaseFactory } from "./baseFactory";
+import { SourceCitationFactory } from './sourceCitationFactory';
 
 export class NoteStructureFactory extends BaseFactory<NoteStructure> {
   constructor() {
@@ -18,17 +19,18 @@ export class NoteStructureFactory extends BaseFactory<NoteStructure> {
 
   private createNoteFromGedcomEntry(entry: Entry): Note {
     const factoryHelper = new FactoryHelper(entry);
+    const sourceCitationEntries = factoryHelper.getChildrenWithTags([Tag.Source]);
 
     return {
       value: entry.value,
-      [Tag.Media]: factoryHelper.getValue([Tag.Media]) as Mime,
+      [Tag.Mime]: factoryHelper.getValue([Tag.Mime]) as Mime,
       [Tag.Language]: factoryHelper.getValue([Tag.Language]),
       [Tag.Translation]: factoryHelper.isDefined([Tag.Language]) && {
         value: factoryHelper.getValue([Tag.Translation]) || '',
-        [Tag.Media]: factoryHelper.getValue([Tag.Translation, Tag.Media]) as Mime,
+        [Tag.Mime]: factoryHelper.getValue([Tag.Translation, Tag.Mime]) as Mime,
         [Tag.Language]: factoryHelper.getValue([Tag.Translation, Tag.Language]),
       },
-      sourceCitations: [],
+      sourceCitations: new SourceCitationFactory().fromGedcomEntries(sourceCitationEntries)
     }
   }
 

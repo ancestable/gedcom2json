@@ -1,0 +1,57 @@
+﻿0 HEAD
+1 GEDC
+2 VERS 7.0.0
+1 SOUR Ancestable
+2 VERS 0.0.0
+2 NAME Ancestable
+2 CORP Test Inc.
+3 ADDR
+4 ADR1 Test Street 1
+4 ADR2 Building A
+4 ADR3 Floor 42
+4 CITY Nearby City
+4 STAE Nearby State
+4 POST 123456
+4 CTRY Another Country
+3 PHON 555 123456789
+3 EMAIL john@nonvalid.nonvalid
+3 FAX 555 987654321
+3 WWW www.christian-buehlmeyer.com
+3 PHON 555 0123456789
+3 EMAIL john2@nonvalid.nonvalid
+3 FAX 555 9876543210
+3 WWW www.christian-buehlmeyer.com
+2 DATA Sample data source
+3 DATE 1 Oct 2021
+4 TIME 0:00:00
+3 CORP NoCorp
+1 DEST Ancestable
+1 DATE 2 Oct 2021
+2 TIME 0:00:00
+1 SUBM @SOUR1@
+1 CORP AnotherTest Inc.
+1 LANG English
+1 PLAC
+2 FORM xml
+1 SNOTE @SNOTE1@
+1 NOTE Just some test
+2 CONT text for a note
+2 MIME text/plain
+2 LANG English
+2 TRAN Ein anderer Testtext
+3 CONT fuer die Notiz
+3 MIME text/plain
+3 LANG German
+2 SOUR @SOUR1@
+3 PAGE 1
+3 DATA
+4 DATE 3 Oct 2021
+5 TIME 0:00:01
+5 PHRASE Header phrase text
+4 TEXT Just some header source text
+5 MIME text/plain
+5 LANG English
+4 TEXT Nur ein header source Text
+5 LANG German
+5 MIME text/plain
+3 QUAY 3
